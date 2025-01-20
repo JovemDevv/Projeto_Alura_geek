@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraGeek</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>💜 AluraGeek</h1>
+  </header>
+  <main>
+    <section class="product-list">
+      <h2>Meus Produtos:</h2>
+      <div id="products-container"></div>
+    </section>
+    <section class="product-form">
+      <h2>Adicionar Produto:</h2>
+      <form id="product-form">
+        <input type="text" id="product-name" placeholder="Nome..." required>
+        <input type="number" id="product-price" placeholder="Valor..." required>
+        <input type="file" id="product-image" accept="image/*" required>
+        <div class="button-container">
+          <button type="submit">Guardar</button>
+          <button type="reset">Limpar</button>
+        </div>
+      </form>
+      
+    </section>
+  </main>
+  <footer>
+    <p>💜 Desenvolvido por Ana Caroline</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

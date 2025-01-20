@@ -1,0 +1,229 @@
+/* Estilos principais (mantidos) */
+html, body {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  
+  color: #fff;
+  overflow: hidden; /* Impede a rolagem inicial */
+}
+
+h2 {
+  color: #000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #5300C8; /* Cor do cabeçalho */
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  overflow-y: auto; /* Permite rolagem apenas no conteúdo principal quando necessário */
+  flex-wrap: wrap; /* Permite que os itens se ajustem conforme o espaço disponível */
+}
+
+.product-list, .product-form {
+  width: 48%;
+}
+
+#products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-card {
+  border: 5px solid #000;
+  background-color: #5300C8;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px; 
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Efeito de zoom */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  border: 5px solid #000;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.product-card button {
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Ajustando o formulário */
+.product-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.product-form h2 {
+  font-size: 1.1rem; /* Tamanho maior para destacar */
+  color: #000; /* Cor preta */
+  text-align: center; /* Centralizar o título */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+
+  margin-left: -400px;
+}
+
+.product-form input {
+  padding: 10px;
+  font-family: 'Press Start 2P', cursive;
+  border: 2px solid #03318C; /* Borda dos inputs */
+  border-radius: 20px; /* Bordas arredondadas */
+  font-size: 0.6rem;
+  outline: none;
+  background-color: #fff; /* Fundo branco */
+  color: #03318C; /* Texto azul */
+  text-align: center;
+}
+
+.product-form input::placeholder {
+  color: #03318C;
+  font-style: italic;
+}
+
+.product-form button {
+  padding: 20px;
+  font-size: 0.7rem;
+  font-family: 'Press Start 2P', cursive;
+  border: 2px solidrgb(3, 46, 140); 
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-form form .button-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 0 50px 0 50px;
+  gap: 50px;
+}
+
+.product-form button:hover {
+  background-color: #03318C; /* Fundo ao passar o mouse */
+  color: #fff; /* Texto ao passar o mouse */
+}
+
+.product-form button[type="submit"] {
+  background-color: #03318C; /* Cor do botão "Limpar" */
+}
+
+.product-form button[type="submit"]:hover {
+  background-color:rgb(255, 255, 255); /* Cor do botão "Limpar" */
+  color: #03318C; /* Cor do botão "Limpar" */
+}
+
+.product-form button[type="reset"] {
+  color: #03318C; /* Cor do botão "Limpar" */
+}
+
+.product-form button[type="reset"]:hover {
+  color: #fff; /* Cor do botão "Limpar" */
+  background-color: #03318C; 
+}
+
+footer {
+  background-color: #5300C8; /* Fundo do rodapé */
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0; /* Impede que o footer encolha */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Para telas menores que 768px (tablet e dispositivos móveis) */
+  .product-list, .product-form {
+    width: 100%; /* Faz as seções ocuparem toda a largura */
+    margin-bottom: 20px;
+    margin-left: -10px;
+  }
+
+  .product-form h2 {
+    margin-left: 0;
+  }
+
+  
+
+  #products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%; /* Ajusta o tamanho do card para caber na tela */
+  }
+
+  .product-form form {
+    width: 100%; /* Ajusta o formulário para ocupar a tela inteira */
+    padding: 20px;
+    margin-left: -10px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para telas menores que 480px (celulares) */
+  header h1 {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte do título */
+  }
+
+  .product-form input {
+    font-size: 0.8rem;
+  }
+
+  .product-form button {
+    font-size: 0.8rem;
+  }
+}
